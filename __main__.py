@@ -28,7 +28,7 @@ fn = aws.lambda_.Function("fn",
 api = apigateway.RestAPI("api",
   routes=[
     apigateway.RouteArgs(path="/", local_path="www"),
-    apigateway.RouteArgs(path="/date", method=apigateway.Method.GET, event_handler=fn),
+    apigateway.RouteArgs(path="/card", method=apigateway.Method.GET, event_handler=fn),
   ])
 
 # The URL at which the REST API will be served.
