@@ -1,0 +1,14 @@
+<h1>Serverless with Pulumi</h1>
+
+Card of the day: <span id="card">.</span>.
+
+<button onclick="getCard()">CotD</button>
+
+
+<script>
+function getCard() {
+    fetch('card')
+    .then(response => response.text())
+    .then(data => document.getElementById("card").innerText = data)
+}
+</script>
